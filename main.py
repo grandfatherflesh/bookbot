@@ -1,4 +1,6 @@
-with open("books/frankenstein.txt") as f:
+#Change the book vars value to the book path.
+book = "books/frankenstein.txt"
+with open(book) as f:
     #Creates a variable for read book.
     file_contents = f.read()
 #Count variable value of which will append with each word.
@@ -23,7 +25,7 @@ for char in low_words:
         if char not in char_dic:
             char_dic[char] = 1
 
-print("--- Begin report of Frankenstein, by Mary Wollstonecraft (Godwin) Shelley ---")
+print(f"--- Begin report of {book} ---")
 print(f"{count} words found in the document")
 #Goes over a character in alphabetically sorted char_dic dictionary.
 for char in sorted(char_dic.keys()):
